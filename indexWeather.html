@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css-2/bootstrap.min.css" rel="stylesheet">
+  <link href="css-2/font-awesome.min.css" rel="stylesheet">
+  <link href="css-2/datepicker3.css" rel="stylesheet">
+  <!-- the style -->
+  <!-- <link href="css-2/styles.css" rel="stylesheet"> -->
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    /* .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    } */
+    
+    .dark-theme{
+        background-color:black;
+    }
+
+    .white-text{
+        color: white;
+    }
+
+    .white{
+        background-color: white;
+    }
+    .box {
+        min-height: 20px;
+        padding: 0 19px 0 19px;
+        margin-bottom: 20px;
+        background-color: black;
+   
+        border-radius: 10px;
+
+        }
+
+    /* Style for the chart */
+    .easypiechart-panel {
+        text-align: center;
+        padding: 1px 0;
+        margin-bottom: 20px;
+    }
+
+    .panel-default {
+        border-color: #ddd;
+    }
+
+    .panel {
+        margin-bottom: 20px;
+        /* background-color: #fff; */
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .easypiechart {
+        position: relative;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        margin: 20px auto 10px auto;
+    }
+
+    .easypiechart {
+        position: relative;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        margin: 10px auto 10px auto; }
+
+    .easypiechart .percent {
+        display: block;
+        position: absolute;
+        font-size: 26px;
+        top: 38px;
+        width: 120px; }
+    
+    .center {
+        margin: auto;
+        width: 50%;
+
+        padding: 10px;
+}
+
+    #easypiechart-red .percent {
+        color: #ef4040; 
+    }
+
+    
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body class="dark-theme">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button style="color:white" type="button" class="navbar-toggle glyphicon glyphicon-edit" data-toggle="collapse" data-target="#myNavbar">                       
+      </button>
+      <a class="navbar-brand glyphicon glyphicon-chevron-left" href="#" style="color:white"></a>
+      <a class="navbar-brand" href="#"><p>All Reports</p></a>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    
+    <div class="col-sm-12">
+      <div class="box white-text">
+        <h2>Migraine Occurences</h2>
+        <p>From 21 Mar 2018 to 30 Mar 2018</p>
+      </div>
+
+      <div class="row">
+ 
+        <div class="col-xs-12">
+            <div class="box">
+           <!-- This is where I experimented with the pie chart -->            
+                <div class="dark-theme panel panel-default">
+                    <div class="dark-theme easypiechart-panel">
+                        <div class="easypiechart" id="easypiechart-red" data-percent="75" >
+                            <span class="percent">75%<p style="font-size:6pt">of your migraines</p></span>
+
+                        </div>
+                    </div>
+                </div>
+            <!-- end of the experimentation code block -->
+            </div>
+        </div>
+        
+        <div class="col-xs-12">
+                <div class="box white-text">
+                    <h2>Occured after</h2>
+                </div>
+            </div>
+
+        <div class="col-xs-6">
+            <div class="box white-text">
+                <h3>extreme</h3>
+                <h3>temperature</h3>
+                <h3>drop</h3> 
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+           <div class="box white-text center">
+                <br>
+                <img src="img/arrow_down_red.png" width="40" height="auto">
+                <br>
+                <h1>-4˚C</h1>
+   
+           </div>
+        </div>
+
+        <div class="container col-xs-12">
+                <div class="box white-text center">
+                  <button type="button" class="btn btn-info btn-block" style="background-color:#15843C; color:black; border-color:#15843C;">View Full Report</button>
+                </div>
+        </div>
+      
+    </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script src="js_2/easypiechart.js"></script>
+<script src="js_2/easypiechart-data.js"></script>
+
+</script>	
+</body>
+</html>
